@@ -1,13 +1,33 @@
 {% extends "common/templates/layout.njk" %}
 
 {% block page_title %}
-  {{ message }}
+   Find Government Data
 {% endblock %}
 
 {% block content %}
   <main id="content" role="main">
-    <h1 class="heading-large">
-      {{ message }}
-    </h1>
+    <div class="dgu-main-search">
+      <div class="grid-row inner">
+        <div class="column-two-thirds">
+          <h1 class="heading-xlarge">
+            Find government data
+          </h1>
+          <p class="lede">
+            Find data published by central government, local authorities and public bodies to help you build products and services
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <form action="/search" method="GET" class="dgu-search-box">
+            <label for="q" class="visuallyhidden"><span class="translation_missing" title="translation missing: en.home.index.search_box_label">Search Box Label</span></label>
+            <input id="q" name="q" type="text" class="form-control dgu-search-box__input"><button type="submit" class="dgu-search-box__button">
+                      <span class="translation_missing" title="translation missing: en.home.index.search_box_button">Search Box Button</span>
+              </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
 {% endblock %}
