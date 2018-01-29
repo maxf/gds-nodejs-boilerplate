@@ -2,9 +2,28 @@
 
 {% set homepage_url = '/' %}
 
+{% set global_header_text = 'Find UK Government data' %}
+
 {% set logo_link_title = 'Go to the GOV.UK Homepage' %}
 
-{% block page_title %}GDS Node.js boilerplate{% endblock %}
+{% block page_title %}Find UK Government data{% endblock %}
+
+{% block inside_header %}
+   <strong class="phase-tag">BETA</strong>
+{% endblock %}
+
+{% block proposition_header %}
+  <div class="header-proposition">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu"> Menu </a>
+      <nav id="proposition-menu">
+        <ul id="proposition-links">
+          <a href="/support">Support</a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+{% endblock %}
 
 {% block head %}
   {% include "common/templates/includes/head.njk" %}
